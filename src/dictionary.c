@@ -18,7 +18,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifndef _WIN32
 #include <unistd.h>
+#else
+#include <io.h>
+#include <BaseTsd.h>
+typedef SSIZ_T ssize_t;
+typedef int mode_t;
+#endif
 
 /** Maximum value size for integers and doubles. */
 #define MAXVALSZ    1024

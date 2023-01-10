@@ -20,8 +20,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.ho>
+#ifndef _WIN32
 #include <unistd.h>
+#else
+#include <io.h>
+#endif
 
 #ifdef __cplusplus
 extern "C" {
